@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <script>
+        function onClick() {
+            NameCard = document.getElementById("NameCard")
+            NameCardError = document.getElementById("nameCardError")
+            cardNumber = document.getElementById("cardNumber")
+            cardNumberError = document.getElementById("cardNumberError")
+            billingAddress = document.getElementById("billingAddress")
+            billingAddressError = document.getElementById("billingAddressError")
+            cvc = document.getElementById("cvc")
+            cvcError = document.getElementById("cvcError")
+            expiration1 = document.getElementById("expiration1")
+            expirationError1 = document.getElementById("expirationError1")
+            expiration2 = document.getElementById("expiration2")
+            expirationError2 = document.getElementById("expirationError2")
+            btn1 = document.getElementById("btn1")
+            flag = true;
+
+            if (NameCard.value == "") {
+                NameCardError.innerHTML = '<span style="color:red">Потребно е да го пополните ова поле</span>'
+                flag = false;
+            } else NameCardError.innerHTML = '<span></span>'
+            if (cardNumber.value == "") {
+                cardNumberError.innerHTML = '<span style="color:red">Потребно е да го пополните ова поле</span>'
+                flag = false;
+            } else cardNumberError.innerHTML = '<span></span>'
+             if (billingAddress.value == "") {
+                billingAddressError.innerHTML = '<span style="color:red">Потребно е да го пополните ова поле</span>'
+                flag = false;
+            }else billingAddressError.innerHTML = '<span></span>'
+              if (expiration1.value == "") {
+                expirationError1.innerHTML = '<span style="color:red">Потребно е да го пополните ова поле</span>'
+                flag = false;
+            }else expirationError1.innerHTML = '<span></span>'
+              if (expiration2.value == "") {
+                expirationError2.innerHTML = '<span style="color:red">Потребно е да го пополните ова поле</span>'
+                flag = false;
+            }else expirationError2.innerHTML = '<span></span>'
+               if (cvc.value == "") {
+                cvcError.innerHTML = '<span style="color:red">Потребно е да го пополните ова поле</span>'
+                flag = false;
+            }else cvcError.innerHTML = '<span></span>'
+
+            return flag;
+
+        }
+    </script>
+<section>
+<div class="container pb-lg-5 pt-lg-5 w-50">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-lg-9">
+      <div class="card" style="border-color: white">
+        <div class="card-body">
+
+          </div>
+
+          <div class="row align-items-center pb-4">
+              <h1 class="accordion-header rounded-1 pb-5">Платежни податоци</h1>
+            <div class="col">
+            <p class="text-black">Name on Card</p>
+            <input id="NameCard" type="text" class="form-control"/>
+                <span id="nameCardError"></span>
+            </div>
+          </div>
+
+          <div class="row align-items-center pb-4">
+            <div class="col">
+            <p class="text-black">Card Number</p>
+            <input id="cardNumber" type="text" class="form-control"/>
+                <span id="cardNumberError"></span>
+            </div>
+          </div>
+
+          <div class="row align-items-center pb-4">
+            <div class="col">
+            <p class="text-black">Billing Address</p>
+            <input id="billingAddress" type="text" class="form-control"/>
+            <span id="billingAddressError"></span>
+            </div>
+          </div>
+
+          <div class="row align-items-center pb-4">
+            <div class="col-4">
+              <p class="text-black">CVC</p>
+              <input id="cvc" type="text" class="form-control" placeholder="ex. 311"/>
+             <span id="cvcError"></span>
+            </div>
+
+            <div class="col-4">
+              <p class="text-black">Expiration</p>
+              <input id="expiration1" type="text" class="form-control" placeholder="MM"/>
+                <span id="expirationError1"></span>
+            </div>
+
+            <div class="col-4">
+              <p class="text-white">Something</p>
+              <input id="expiration2" type="text" class="form-control" placeholder="YYYY"/>
+              <span id="expirationError2"></span>
+            </div>
+          </div>
+          <hr/>
+
+          <div class="row align-items-center pt-4 pb-4">
+            <div class="col">
+              <button class="btn btn-success w-100">Вкупна сума: €49.99</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="col">
+                <a href="{% url 'home1' %}" id="btn1" class="btn btn-primary w-100" onclick="return onClick()">Наплати &raquo;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</body>
+</html>

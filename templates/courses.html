@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top" style="background-color:#10162f;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li>
+              <img style="height: 40px; width: 40px;" src="https://brandslogos.com/wp-content/uploads/thumbs/angular-logo-vector.svg">
+          </li>
+          <li style="color: #10162f">
+              so
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="{% url 'home1' %}">Почетна</a>
+        </li>
+
+        <li class="nav-item dropdown">
+           <a class="nav-link active text-white" aria-current="page" href="{% url 'courses' %}">Курсеви</a>
+        </li>
+          <li class="nav-item dropdown">
+           <a class="nav-link active text-white" aria-current="page" href="{% url 'mainQuiz' %}">Kвизови</a>
+        </li>
+
+              <li class="nav-item dropdown" style="padding-left: 860px;">
+           <a class="nav-link active text-white" aria-current="page" href="{% url 'logout' %}">Одјави се</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container pt-4">
+    <div class="justify-content-center">
+
+    </div>
+</div>
+
+<div class="container" style="width: 70%;">
+<div class="justify-content-center pt-4">
+     <h2 class="pb-3">Сите Angular курсеви</h2>
+    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <img style="width:450px; height:252px;" src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1018487/retina_1708x683_cover-REDESIGN-StepByStepAngular-Luke_Newsletter-4ccf196e360a5790beaae921500d731c-20004898dc8a42db688b8edbae4a4a94.png" class="card-img"/>
+            </div>
+            <div class="col-lg-6">
+                <div class="card-body">
+                    <h3 class="card-title pb-1">Вовед во Angular</h3>
+                    <p class="card-text">
+                       Angular е платформа и рамка за градење клиентски апликации на една страница користејќи HTML и TypeScript. Имплементира основна и опционална функционалност како збир на библиотеки TypeScript што ги внесувате во вашите апликации...
+                    </p>
+                    <p class="card-text">
+                        <a href="{% url 'section-view' 1 %}" class="btn btn-primary" type="submit">Продолжи</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="justify-content-center pt-4">
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <img style="width:450px; height:252px;" src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1018487/retina_1708x683_cover-REDESIGN-StepByStepAngular-Luke_Newsletter-4ccf196e360a5790beaae921500d731c-20004898dc8a42db688b8edbae4a4a94.png" class="card-img"/>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body">
+                        <h3 class="card-title pb-1">Компоненти и темплејти</h3>
+                        <p class="card-text">
+                           Градите Angular апликации со компоненти. Компонентите ги дефинираат областите на одговорност во интерфејсот што ви дозволуваат повторно да ги користите функционалностите на интерфејсот...
+                        </p>
+                        <p class="card-text">
+                            <a href="{% url 'section-view' 2 %}" class="btn btn-primary" type="submit">Продолжи</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="justify-content-center pt-4">
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <img style="width:450px; height:252px;"src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1018487/retina_1708x683_cover-REDESIGN-StepByStepAngular-Luke_Newsletter-4ccf196e360a5790beaae921500d731c-20004898dc8a42db688b8edbae4a4a94.png" class="card-img"/>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body">
+                        <h3 class="card-title pb-1">Додавање навигација</h3>
+                        <p class="card-text">
+                          Angular обезбедува широкo множество на функции за навигација за да креираме  сложено сценарио. Процесот на дефинирање на навигацискиот елемент и соодветниот приказ се нарекува Routing.
+                            Angular обезбедува посебен модул, RouterModule...
+                        </p>
+                        <p class="card-text">
+                            <a href="{% url 'section-view' 3 %}" class="btn btn-primary" type="submit">Продолжи</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="justify-content-center pt-4">
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <img style="width:450px; height:252px;" src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1018487/retina_1708x683_cover-REDESIGN-StepByStepAngular-Luke_Newsletter-4ccf196e360a5790beaae921500d731c-20004898dc8a42db688b8edbae4a4a94.png" class="card-img"/>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body">
+                        <h3 class="card-title pb-1">Data binding</h3>
+                        <p class="card-text">
+             Data Binding се занимава со тоа како да ги поврзете вашите податоци од компонента со HTML DOM елементи (шаблони). Можеме лесно да комуницираме со апликацијата без да се грижиме како да ги вметнеме нашите податоци...
+                        </p>
+                        <p class="card-text">
+                            <a href="{% url 'section-view' 4 %}" class="btn btn-primary" type="submit">Продолжи</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <hr class="h-divider">
+
+        <nav class="navbar justify-content-around">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="{% url 'courses' %}"> &laquo;</a></li>
+                <li class="page-item active"><a class="page-link" href="{% url 'courses' %}">1</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'courses1' %}">2</a></li>
+                <li class="page-item"><a class="page-link" href="{% url 'courses1' %}"> &raquo;</a></li>
+            </ul>
+        </nav>
+    <hr class="h-divider">
+</div>
+
+
+</body>
+</html>

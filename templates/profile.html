@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top" style="background-color:#10162f;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li>
+              <img style="height: 40px; width: 40px;" src="https://brandslogos.com/wp-content/uploads/thumbs/angular-logo-vector.svg">
+          </li>
+          <li style="color: #10162f">
+              so
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="{% url 'home1' %}">Почетна</a>
+        </li>
+
+        <li class="nav-item dropdown">
+           <a class="nav-link active text-white" aria-current="page" href="{% url 'courses' %}">Курсеви</a>
+        </li>
+           <li class="nav-item dropdown">
+           <a class="nav-link active text-white" aria-current="page" href="{% url 'mainQuiz' %}">Kвизови</a>
+        </li>
+          <li class="nav-item dropdown">
+           <a class="nav-link active text-white" aria-current="page" href="{% url 'profile' %}">Профил</a>
+        </li>
+              <li class="nav-item dropdown" style="padding-left: 860px;">
+           <a class="nav-link active text-white" aria-current="page" href="{% url 'logout' %}">Одјави се</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+<div class="justify-content-center pt-4 pb-4">
+
+    {% for p in profile %}
+        <div class="row justify-content-center align-items-center pt-4">
+    <div class="card" style="width: 30rem;">
+        <img  style="width: 450px; height: 400px;" src="https://www.grovenetworks.com/images/easyblog_shared/July_2018/7-4-18/b2ap3_large_totw_network_profile_400.jpg" class="card-img-bottom">
+   <div class="card-body">
+   <h3 class="navbar-text">{{ p.name }} {{ p.last_name }}</h3>
+   <p class="card-text fst-italic">Age: {{ p.age }}</p>
+   <p class="card-text"><b>Profession:</b> Software Engineer</p>
+   <p class="card-text"><b>Interested in:</b> {{ p.hobbies }}</p>
+  </div>
+</div>
+</div>
+    {% endfor %}
+</div>
+</div>
+</body>
+</html>
